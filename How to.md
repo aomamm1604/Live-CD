@@ -31,9 +31,14 @@
 
 #●ไปที่หน้า Console ของ UCK
    - ทำการติดตั้ง JAVA 
-
+   
       #apt-get update
       #add-apt-repository ppa:webupd8team/java
+      #apt-get update
+      #apt-get install oracle-java8-installer
+      #update-alternatives --config java
+
+    
       #apt-get update
       #apt-get install oracle-java8-installer
       #update-alternatives --config java
