@@ -8,5 +8,7 @@
    โดยการ ติดตั้งสามารถ ติดตั้งผ่าน Ubuntu’s Software Center โดยการพิมพ์ uck or Ubuntu Customization Kit ไปยังช่องค้นหา
    หรือจะทำการติดตั้งผ่าน terminal โดยใช้
    
-      #sudo apt-get install uck
+      #apt-get install uck
   
+#●ทำการ start UCK 
+
