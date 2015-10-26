@@ -108,13 +108,13 @@
          #! /bin/sh
          cd /home/ubuntu/pc2/bin/
          ./pc2team
-      
+  
       #chmod +x test.sh
    
    
 #● สร้าง desktop icon สำหรับ folder pc2
 
-      nano /usr/share/applications/pc2team.desktop
+      #nano /usr/share/applications/pc2team.desktop
          [Desktop Entry]
          Name=PC2TEAM
          Type=Application
@@ -125,7 +125,7 @@
          NoDisplay=false
          Categories=Application;
          Name[en]=pc2team
-      
+
       #chmod +x /usr/share/applications/pc2team.desktop
       #desktop-file-install /usr/share/applications/pc2team.desktop
       #cp /usr/share/applications/pc2team.desktop /etc/skel/Desktop/
@@ -137,4 +137,5 @@
 #● ทำการ ลบ package ที่เราไม่ต้องการทิ้ง
 
       #apt-get remove Ubiquity
+   
       #gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope',    'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
