@@ -29,8 +29,8 @@
 
 ในตัวอย่างนี้ เราจะทำการติดตั้งโปรแกรม codeblocks, eclipse และ โปรแกรม pc2 สำหรับ user
 
-#●ไปที่หน้า Console ของ UCK
-   - Install JAVA
+#●ไปที่หน้า Console ของ UCK ทำการติดตั้ง JAVA
+
          #apt-get update
          #add-apt-repository ppa:webupd8team/java
          #apt-get update
@@ -38,6 +38,7 @@
          #update-alternatives --config java
          #apt-get install oracle-java8-set-default
          #update-alternatives --config java
+         #java -version ; javac -version
    
 #●ไปที่หน้า terminal ของ เครื่อง 
    Host ทำการ copy file ที่เราต้องการไปไว้ที่ /etc/skel ซึ่งไฟล์เหล่านี้จะปรากฎอยู่ที่ home directory ของแต่ล่ะ user  
@@ -68,7 +69,7 @@
 
    create icon on desktop
 
-    nano /usr/share/applications/eclipse.desktop
+    #nano /usr/share/applications/eclipse.desktop
        [Desktop Entry]
          Name=Eclipse
          Type=Application
@@ -81,4 +82,59 @@
          Name[en]=eclipse
 
    
+#● ไปที่ /ect/skel ทำการ create Desktop directory
+
+      #cd /etc/skel
+      #mkdir Desktop
+
+#● ติดตั้ง desktop icon
+
+      #chmod +x /usr/share/applications/eclipse.desktop
+      #desktop-file-install /usr/share/applications/eclipse.desktop
+      #ln -s /opt/eclipse/eclipse /usr/local/bin/
+      #cp /usr/share/applications/eclipse.desktop /etc/skel/Desktop/
+      #cd Desktop
+      #chmod 755 eclipse.desktop 
+      #eclipse
+
+#● ลบ folder example หน้า Desktop ทิ้ง
+
+      #cd /etc/skel
+      #rm -rf examples.desktop 
    
+#● สร้าง shell script สำหรับ run pc2team ใน /etc/skel
+
+      #vi test.sh
+         #! /bin/sh
+         cd /home/ubuntu/pc2/bin/
+         ./pc2team
+      
+      #chmod +x test.sh
+   
+   
+#● สร้าง desktop icon สำหรับ folder pc2
+
+      nano /usr/share/applications/pc2team.desktop
+         [Desktop Entry]
+         Name=PC2TEAM
+         Type=Application
+         Exec=sh /home/ubuntu/test.sh
+         Terminal=false
+         Icon=/usr/share/icons/HighContrast/scalable/categories/applications-system.svg
+         Comment=ACM
+         NoDisplay=false
+         Categories=Application;
+         Name[en]=pc2team
+      
+      #chmod +x /usr/share/applications/pc2team.desktop
+      #desktop-file-install /usr/share/applications/pc2team.desktop
+      #cp /usr/share/applications/pc2team.desktop /etc/skel/Desktop/
+      #cd /etc/skel/Desktop
+      #chmod 755 pc2team.desktop
+      
+
+
+#● ทำการ ลบ package ที่เราไม่ต้องการทิ้ง
+
+      #apt-get remove Ubiquity
+      #gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope',    'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
