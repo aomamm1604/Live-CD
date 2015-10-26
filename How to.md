@@ -41,7 +41,7 @@
       #update-alternatives --config java
    
    - Check JAVA
-      # java --version ; javac --version
+      # java -version ; javac -version
 
 #●ไปที่หน้า terminal ของ เครื่อง 
    Host ทำการ copy file ที่เราต้องการไปไว้ที่ /etc/skel ซึ่งไฟล์เหล่านี้จะปรากฎอยู่ที่ home directory ของแต่ล่ะ user  
@@ -49,7 +49,40 @@
       #cp yourfile /home/muict/tmp/remaster-root/etc/skel
       #cp eclipse-cpp-mars-1-linux-gtk-x86_64.tar.gz /home/muict/tmp/remaster-root/opt
 
-#● หลังจาก copy file ต่างๆที่เราต้องการแล้วให้ทำการกลับมาที่ uck console
+หลังจาก copy file ต่างๆที่เราต้องการแล้วให้ทำการกลับมาที่ uck console
    
+#● Go back to UCK Consloe
+
+   ลองทำการตรวจสอบไฟล์ต่างๆที่เรา copy มาด้วยการ ls ดูที่ directory  เหล่านั้น
+   
+    #ls /opt
+    #ls /etc/skel/
+
+#● Install gcc g++ vim gedit
+
+    #apt-get install -y vim gedit build-essential
+    #gcc --version ; g++ --version
+   
+#● Install eclipse
+
+    #cd /opt
+    #ls
+    #tar -xvf eclipse-cpp-mars-1-linux-gtk-x86_64.tar.gz 
+    #rm -rf eclipse-cpp-mars-1-linux-gtk-x86_64.tar.gz 
+
+   create icon on desktop
+
+    nano /usr/share/applications/eclipse.desktop
+       [Desktop Entry]
+         Name=Eclipse
+         Type=Application
+         Exec=/opt/eclipse/eclipse
+         Terminal=false
+         Icon=/opt/eclipse/icon.xpm
+         Comment=Integrated Development Environment
+         NoDisplay=false
+         Categories=Development;IDE;
+         Name[en]=eclipse
+
    
    
