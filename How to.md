@@ -38,13 +38,7 @@
          #update-alternatives --config java
          #apt-get install oracle-java8-set-default
          #update-alternatives --config java
-    
-
-   - Check Java version
    
-         #java -verion
-         #javac -version
-
 #●ไปที่หน้า terminal ของ เครื่อง 
    Host ทำการ copy file ที่เราต้องการไปไว้ที่ /etc/skel ซึ่งไฟล์เหล่านี้จะปรากฎอยู่ที่ home directory ของแต่ล่ะ user  
    
