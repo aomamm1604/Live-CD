@@ -139,3 +139,44 @@
       #apt-get remove Ubiquity
    
       #gsettings set com.canonical.Unity.Lenses disabled-scopes "['more_suggestions-amazon.scope',    'more_suggestions-u1ms.scope', 'more_suggestions-populartracks.scope', 'music-musicstore.scope', 'more_suggestions-ebay.scope', 'more_suggestions-ubuntushop.scope', 'more_suggestions-skimlinks.scope']"
+      #gsettings set com.canonical.Unity.Lenses remote-content-search none
+      #rm -rf /usr/share/applications/ubuntu-amazon-default.desktop
+      #apt-get -y remove --purge libreoffice*
+      #apt-get clean
+      #apt-get autoremove
+      #apt-get remove fonts-opensymbol libreoffice libreoffice-\* openoffice.org-dtd-officedocument1.0 python\*-uno uno-libs3-\* ure ure-dbg
+      #aptitude search '~i' | grep libreoffice
+      #apt-get remove libreoffice-core
+      #apt-get purge thunderbird*
+      #apt-get purge firefox
+      #rm -rf ~/.mozilla
+      #rm -rf /usr/lib/firefox
+      #rm -rf /usr/lib/firefox-addons/
+      #apt-get remove --purge unity-lens-shopping
+
+#●Add univers repository
+
+      #sudo -e /etc/apt/sources.list
+      #add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
+      #add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe restricted multiverse"
+      #add-apt-repository "deb http://archive.canonical.com/ubuntu $(lsb_release -sc) partner"
+
+#● Install Codeblocks
+
+      #apt-get update
+      #add-apt-repository ppa:pasgui/ppa
+      #apt-get update
+      #apt-get install codeblocks
+
+#● commnet พวก repo ที่เราเพิ่ง add เพิ่มไป
+
+      #nano /etc/apt/sources.list
+      #apt-get update
+
+#● เสร็จ
+
+      #exit
+
+#● ทำการเลือก continue building รอจนเสร็จ
+
+ไฟล์ iso จะอยู่ที่ /tmp/remaster-new/
