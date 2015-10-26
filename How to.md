@@ -30,23 +30,12 @@
 ในตัวอย่างนี้ เราจะทำการติดตั้งโปรแกรม codeblocks, eclipse และ โปรแกรม pc2 สำหรับ user
 
 #●ไปที่หน้า Console ของ UCK
-   - ทำการติดตั้ง JAVA 
+   - ทำการติดตั้ง JAVA
    
       #apt-get update
-      #add-apt-repository ppa:webupd8team/java
-      #apt-get update
-      #apt-get install oracle-java8-installer
-      #update-alternatives --config java
+      add-apt-repository ppa:webupd8team/java
 
-    
-      #apt-get update
-      #apt-get install oracle-java8-installer
-      #update-alternatives --config java
-      #apt-get install oracle-java8-set-default
-      #update-alternatives --config java
    
-   - Check JAVA
-      # java -version ; javac -version
 
 #●ไปที่หน้า terminal ของ เครื่อง 
    Host ทำการ copy file ที่เราต้องการไปไว้ที่ /etc/skel ซึ่งไฟล์เหล่านี้จะปรากฎอยู่ที่ home directory ของแต่ล่ะ user  
