@@ -12,3 +12,37 @@
   
 #●ทำการ start UCK 
 
+#เลือก Run Console Application
+เพื่อทำการcustomize ตัว ISO File หลังจากที่เราเข้าหน้า consloe มาแล้ว เราจะอยู่ในสิทธิ์ root โดย folder root ในที่นี้จะถูก
+ลบทิ้งหลังจากเราทำการ build iso
+
+โดยเราสามารถเข้าไปดู directory ต่างๆได้ที่
+
+      #cd home/ชื่อuser/tmp/remaster-root/
+
+หากเราต้องการเพิ่มไฟล์ หรือ อยากจะสร้าง folder ที่ใส่ package สำหรับให้ user ต่างๆได้ใช้ เราสามารถนำไฟล์เหล่านั้นไปไว้ที่
+
+      #cd /etc/skel
+
+
+ไฟล์ต่างๆ จะถูกสร้างให้แต่ล่ะ user ที่ถูก generate ขึ้นมาใหม่โดยอัติโนมัติ
+
+ในตัวอย่างนี้ เราจะทำการติดตั้งโปรแกรม codeblocks, eclipse และ โปรแกรม pc2 สำหรับ user
+
+#●ไปที่หน้า Console ของ UCK
+   #- ทำการติดตั้ง JAVA 
+
+      #apt-get update
+      #add-apt-repository ppa:webupd8team/java
+      #apt-get update
+      #apt-get install oracle-java8-installer
+      #update-alternatives --config java
+      #apt-get install oracle-java8-set-default
+      #update-alternatives --config java
+   
+   #- Check JAVA
+      # java --version ; javac --version
+
+
+   
+   
